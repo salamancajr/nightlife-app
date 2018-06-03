@@ -36,3 +36,14 @@ body{
     position:fixed;
 
 }
+#briefcase{
+    z-index:1;
+    position:absolute;
+    bottom:20px;
+    right:-5px;
+    font-size: 30px;
+    color: darkBlue;
+    width:60px;
+    position:fixed;
+
+}
