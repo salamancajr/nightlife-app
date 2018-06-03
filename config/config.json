@@ -1,0 +1,11 @@
+{
+    "test":{
+        "PORT": 3000,
+        "MONGODB_URI":"mongodb://localhost:27017/nightlifeTest"
+     },
+    "development":{
+        "PORT": 3000,
+        "MONGODB_URI":"mongodb://localhost:27017/nightlife"
+
+    }
+}

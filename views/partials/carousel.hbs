@@ -1,0 +1,50 @@
+<div style="text-align:center">
+    <div id="demo" class="carousel slide" data-ride="carousel">
+    </div>
+    <i style="cursor:pointer; margin-top:10px" onclick="myFunction()" class="material-icons prefix">info_outline</i>
+</div>
+<script>
+    var div = document.getElementById("demo")
+    var text = ["This is the Nightlife Coordination App, where you can search for the best spots to visit any night",
+        "This app was developed with Node.js, using handlebars.js template engine and yelp fusion.",
+        "To visit the github repository, or to see more of my work, click on the icons on the bottom right"
+    ]
+
+    var image = [
+        "https://images.unsplash.com/photo-1521294102048-6cb73602dc43?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=62290477f0f0db4d5be6ad7834781f39&auto=format&fit=crop&w=1050&q=80",
+        "https://images.unsplash.com/photo-1506699311528-5be252edc26a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=dd78bcd29d80097d7aced99ab40dadae&auto=format&fit=crop&w=1051&q=80",
+        "https://images.unsplash.com/photo-1500482176473-ccba10e1e880?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=963c6384f308cab096de92d1496a2deb&auto=format&fit=crop&w=634&q=80"
+    ]
+
+
+    var i = 1;
+    var int;
+    function carousel() {
+        div.style.backgroundImage = `url(${image[0]})`
+        int = setInterval(function () {
+
+            div.innerHTML = ""
+            div.style.backgroundImage = `url(${image[i]})`
+            if (i < image.length-1) {
+                i++
+            } else {
+                i = 0
+            }
+        }, 5000)
+    }
+carousel()
+    function myFunction() {
+        if (div.innerHTML === "") {
+            clearInterval(int)
+            div.style.backgroundImage = ""
+            div.innerHTML =
+                "<p class='valign-wrapper' id='info'>This is a nightlife coordination app, where you can search for the best spots to visit any night. This app was developed with Node.js, using handlebars.js template engine and yelp fusion. To visit the github repository, or to see more of my work, click on the icons on the bottom right.<p>"
+
+        } else {
+            clearInterval(int)
+            div.innerHTML ="";
+               div.style.backgroundImage = `url(${image[0]})`
+            carousel()
+        }
+    }
+</script>

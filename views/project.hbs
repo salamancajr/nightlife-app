@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body style="margin:auto">
+    {{#if photo}}
+    <br>
+    <div style="float:right; text-align:center">
+        <a href="https://twitter.com" target="_blank">
+            <img src={{photo}} style="border-radius:50%; width:40px">
+            <h7>{{username}}</h7>
+        </a>
+    </div>
+    <br>{{/if}}
+    <div style="margin:auto;width:38em; ">
+        <form method="/get" action="/search" enctype="application/x-www-form-urlencoded" class="col s12" style="margin-top:50px; ">
+            <div class="row">
+
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">search</i>
+                    <input id="icon_prefix" type="text" name="place" required>
+                    <label for="icon_prefix">Enter location</label>
+                </div>
+
+            </div>
+
+    </div>
+    </form>
+    </div>
+
+    {{#if carousel}}{{> carousel}} {{/if}} {{#if businesses}} {{#list businesses}}
+
+
+    <a href={{url}} target="_blank">
+        <img src={{image_url}} alt="" class="circle" width="100px" height="100px">
+    </a>
+    <span class="title">{{name}}</span>
+    <br>
+    <br>
+    <p>{{reviews}}</p>
+
+    {{/list}} {{/if}}
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script src="/index.js">
+    </script>
+    <a href="https://github.com/salamancajr/voting-app" target="_blank"><i id="github"class="fab fa-github"></i></a>
+
+</body>
+
+</html>
