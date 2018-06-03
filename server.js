@@ -33,7 +33,7 @@ const client = yelp.client(apiKey);
 passport.use(new Strategy({
         consumerKey: "i02sm71LaTQaQ4K7NIAhP98S6",
         consumerSecret: "xj8WqC4UdkLcdzrKNKvLDgNmGlf5qfBO7eB0omOVhOXvkezd1r",
-        callbackURL: "http://127.0.0.1:3000/auth/twitter/callback"
+        callbackURL: "https://hidden-sands-23770.herokuapp.com/auth/twitter/callback"
     },
     function (token, tokenSecret, profile, done) {
         var user = new User({
