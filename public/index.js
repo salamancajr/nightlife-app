@@ -16,7 +16,7 @@ for (var i = 0; i < array.length; i++) {
 }
 
 socket.on("confirmToken", function (message) {
-    if(message=="yes"){
+    if(message.user=="yes"){
     var array = document.getElementsByName("tally")
     for (var i = 0; i < array.length; i++) {
         $(array[i]).removeAttr("href")
