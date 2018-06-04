@@ -139,8 +139,11 @@ app.get("/search", (req, res) => {
         var photo = req.user.photos,
             username = req.user.username;
         io.on("connection", (socket) => {
-            socket.emit("confirmToken")
+            socket.emit("confirmToken", "yes")
         })
+    }
+    if (!req.user) {
+        socket.emit("confirmToken", "no")
     }
     const searchRequest = {
         location: req.query.place,
