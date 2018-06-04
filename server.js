@@ -81,7 +81,7 @@ hbs.registerHelper('list', function (items, options) {
         } else {
             var replacement = items[i].name
         }
-        out = out + "<li class='collection-item avatar'><div class='row'><div class='col l11 col m10 col s9'>" + options.fn(items[i]) + "</div><div class='vertical-align:middle'style='text-align:center; margin:auto'class='col l1 col m2 col s3'><a href='/auth/twitter' id='" + noApostrophe + "' name='tally' style='font-size:10px; margin:auto'class='waves-effect waves-light btn'>Attending<br><span name=" + noApostrophe + "id='num-att'>" + items[i].count + "</span></a></div></div></li>";
+        out = out + "<li class='collection-item avatar'><div class='row'><div class='col l11 col m10 col s9'>" + options.fn(items[i]) + "</div><div class='vertical-align:middle'style='text-align:center; margin:auto'class='col l1 col m2 col s3'><a href='/auth/twitter' id='" + noApostrophe + "' name='tally' style='z-index:0;font-size:10px; margin:auto'class='waves-effect waves-light btn'>Attending<br><span name=" + noApostrophe + "id='num-att'>" + items[i].count + "</span></a></div></div></li>";
     }
     return out + "</ul>";
 });
