@@ -15,10 +15,6 @@ const apiKey =
         }
 
         callback(undefined, {review: body.reviews[0].text})
-        //console.log(body.reviews[0].text);
-
-        //reviews = body.reviews[0].text;
-
     });
 };
 
