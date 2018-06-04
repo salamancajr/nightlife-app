@@ -19,22 +19,41 @@
 </head>
 
 <body style="margin:auto">
-    {{#if photo}}
-    <br>
-    <div style="float:right; text-align:center">
-        <a href="https://twitter.com" target="_blank">
-            <img src={{photo}} style="border-radius:50%; width:40px">
-            <h7>{{username}}</h7>
-        </a>
-    </div>
-    <br>{{/if}}
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo">Nightlife App</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li>
+                    <a href="https://codepen.io/salamancajr/full/zpBPXK/" target="_blank">
+                        <i id="briefcase" class="fas fa-briefcase"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/salamancajr/nightlife-app" target="_blank">
+                        <i id="github" class="fab fa-github"></i>
+                    </a>
+                </li>
+                {{#if photo}}
+                <li>
+                    <a href="https://twitter.com" target="_blank">
+                        <img src={{photo}} style="border-radius:50%; width:40px">
+                        <h7>{{username}}</h7>
+                    </a>
+                </li>
+                {{/if}}
+            </ul>
+        </div>
+    </nav>
+
+
+
     <div style="margin:auto;width:38em; ">
         <form method="/get" action="/search" enctype="application/x-www-form-urlencoded" class="col s12" style="margin-top:50px; ">
             <div class="row">
 
                 <div class="input-field col s12">
                     <i class="material-icons prefix">search</i>
-                    <input style='width:90%'id="icon_prefix" type="text" name="place" required>
+                    <input style='width:90%' id="icon_prefix" type="text" name="place" required>
                     <label for="icon_prefix">Enter location</label>
                 </div>
 
@@ -64,12 +83,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
     <script src="/index.js">
     </script>
-    <a href="https://codepen.io/salamancajr/full/zpBPXK/" target="_blank">
-        <i id="briefcase" class="fas fa-briefcase"></i>
-    </a>
-    <a href="https://github.com/salamancajr/nightlife-app" target="_blank">
-        <i id="github" class="fab fa-github"></i>
-    </a>
+
+
 
 </body>
 
