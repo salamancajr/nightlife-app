@@ -21,13 +21,15 @@ socket.on("confirmToken", function (message) {
     for (var i = 0; i < array.length; i++) {
         $(array[i]).removeAttr("href")
         console.log('removed');
-    }}
-    else{
-        var array = document.getElementsByName("tally")
-        for (var i = 0; i < array.length; i++) {
-            $(array[i]).attr("href", "/auth/twitter")
-            console.log('added');
-    }}
+    }
+// }
+//     else{
+//         var array = document.getElementsByName("tally")
+//         for (var i = 0; i < array.length; i++) {
+//             $(array[i]).attr("href", "/auth/twitter")
+//             console.log('added');
+//     }
+}
 })
 socket.on("connect", function () {
     console.log("Connected to server");
