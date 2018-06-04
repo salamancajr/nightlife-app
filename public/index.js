@@ -15,13 +15,13 @@ for (var i = 0; i < array.length; i++) {
     })
 }
 
-socket.on("confirmToken", function (message) {
-    if(message.user=="yes"){
+socket.on("confirmToken", function () {
+
     var array = document.getElementsByName("tally")
     for (var i = 0; i < array.length; i++) {
         $(array[i]).removeAttr("href")
         console.log('removed');
-    }
+
 // }
 //     else{
 //         var array = document.getElementsByName("tally")

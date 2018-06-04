@@ -139,12 +139,10 @@ app.get("/search", (req, res) => {
         var photo = req.user.photos,
             username = req.user.username;
         io.on("connection", (socket) => {
-            socket.emit("confirmToken", {user: "yes"})
+            socket.emit("confirmToken")
         })
     }
-    if (!req.user) {
-        socket.emit("confirmToken", {user:"no"})
-    }
+
     const searchRequest = {
         location: req.query.place,
         limit: 10
